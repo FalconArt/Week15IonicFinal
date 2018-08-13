@@ -1,0 +1,15 @@
+<!-- Generated template for the TranslateApiComponent component -->
+<div>
+
+  <ion-item>
+  <ion-input matInput placeholder="Search in any language..." primary #searchInput></ion-input>
+  </ion-item>
+
+	<button ion-button color="primary" block (click)="getTranslation(searchInput.value)">Search</button>
+
+	<span *ngIf="loading">Loading...</span>
+
+	<div class="photo" *ngFor="let image of photoData">
+		<img src="{{ image.urls.full }}">
+	</div>
+</div>
